@@ -305,7 +305,7 @@ export default definePlugin({
             row(FAVOURITES, pick(favouriteIds(), all).filter(inCategory), S.favourites, "collapsedFavourites");
 
             if (settings.store.showRecent) {
-                const history = pick(recentIds(), all);
+                const history = pick(recentIds(), all).slice(0, 12);
                 const seeding = !history.length && settings.store.seedRecent && !only;
                 const recent = (seeding ? seeded(all) : history)
                     .filter(i => !isFavourite(i.skuId))

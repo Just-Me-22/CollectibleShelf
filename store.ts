@@ -10,7 +10,7 @@ import { UserStore } from "@webpack/common";
 
 const logger = new Logger("CollectibleShelf");
 const KEY = "CollectiblePickers_v1";
-const RECENTS_CAP = 12;
+const RECENTS_CAP = 60;
 
 type Saved = { favourites: string[]; recents: string[]; };
 
